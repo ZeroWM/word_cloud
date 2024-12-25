@@ -15,14 +15,14 @@ from os import path
 from wordcloud import WordCloud
 
 # GraphQL 端点(需修改)
-url = 'http://your_http_here'
+url = 'your_url'
 page = 1
 text = ""
 
     # GraphQL 查询和变量
 query = """
-query yourMethod {
-  yourMethod(include: UNRESERVED, type: LIST) {
+query GetTagList {
+  tags(include: UNRESERVED, type: LIST) {
     __typename
     id
     name
